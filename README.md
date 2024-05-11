@@ -1,4 +1,5 @@
-# UiKIT
+# raco-ui
 
-npm install -g sass
-npm install sass --save-dev
+#### палитра 
+
+
