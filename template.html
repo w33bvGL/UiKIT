@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Выбор стран</title>
+    <link rel="stylesheet" href="css/root.css" />
+    <link rel="stylesheet" href="css/singleSelect.css" />
+    <link rel="stylesheet" href="css/multiSelect.css" />
+  </head>
+  <body
+    style="
+      background-color: rgb(240, 240, 240);
+      height: 100vh;
+      display: flex;
+      max-width: 400px;
+      margin: 0 auto;
+      padding-top: 100px;
+      flex-direction: column;
+    "
+  >
+    <form action="template.html" method="get">
+      <!-- Укажите здесь путь к обработчику формы -->
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div class="selectors">
+          <label for="countries">Выберите страны:</label>
+          <select name="countries[]" id="countries" multiple>
+            <option value="pwodjowjdpwd">Авганистан</option>
+            <option value="2wdwdwd">Австралия</option>
+            <option value="3wdwd">Германия</option>
+            <option value="4wdwd">Канада</option>
+            <option value="ww5">Россия</option>
+          </select>
+        </div>
+        <div class="selectors">
+          <label for="gorods">Выберите города:</label>
+          <select name="gorods" id="gorods" style="width: 200px !important" multiple>
+            <option value="1">Кабул</option>
+            <option value="2">Сидней</option>
+            <option value="3">Берлин</option>
+            <option value="4">Оттава</option>
+            <option value="5">Москва</option>
+          </select>
+        </div>
+        <button type="submit" style="padding: 7px; cursor: pointer">
+          Отправить
+        </button>
+      </div>
+    </form>
+  </body>
+  <style>
+    :root {
+      --v-select-body-bg-color: white;
+      --v-select-body-border-color: rgb(218, 221, 224);
+      --v-select-checkbox-accent-color: #0276ff;
+      --v-select-search-focus-border-color:  #0276ff;
+      --v-select-list-mult-item-container-color: #0276ff;
+      --v-select-list-mult-item-container-bg-color: rgba(2, 120, 255, 0.1);
+      --v-select-list-input-sctive-bg-color: rgba(2, 120, 255, 0.2);
+      --v-select-list-input-hover-bg-color: rgb(243 244 246);
+      --v-select-drawer-scrollbar-track-color: #f3f3f3;
+      --v-select-drawer-scrollbar-thumb-color: #dbdbdb;
+      --v-select-tag-button-color: gray;
+
+
+      --v-select-rounded-border-radius-size: 4px;
+      --v-select-label-font-size: 0.9em;
+    }
+  </style>
+  <script src="js/multiSelect.js"></script>
+  <script src="js/singleSelect.js"></script>
+  <script>
+    new MultiSelectTag("countries", {
+      rounded: false,
+      placeholder: "Поиск...",
+      onChange: function (values) {
+        console.log(values);
+      },
+    });
+    new SingleSelectTag("gorods", {
+      rounded: true,
+      placeholder: "Поиск...",
+      onChange: function (values) {
+        console.log(values);
+      },
+    });
+  </script>
+</html>

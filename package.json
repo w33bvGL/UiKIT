@@ -1,8 +1,8 @@
 {
-  "name": "raco-ui",
-  "version": "1.0.2",
+  "name": "v-selectui",
+  "version": "1.0.8",
   "description": "Описание вашего пакета",
-  "main": "index.css",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "font";
+  src: url("../font/ota-ku.woff2") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'font', sans-serif;
+}
