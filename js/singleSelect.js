@@ -156,7 +156,6 @@ export function SingleSelectTag(el, customs = { shadow: false, rounded: true }) 
         const selectedLi = ul.querySelector(`li[data-value="${option.value}"]`);
         if (selectedLi) {
           selectedLi.classList.add("active");
-          console.log("gtnvav ka");
         }
       }
     }

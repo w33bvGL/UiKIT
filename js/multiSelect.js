@@ -2,7 +2,7 @@
 // Email: habibmhamadi@gmail.com
 
 
-function MultiSelectTag(el, customs = { shadow: false, rounded: true }) {
+export function MultiSelectTag(el, customs = { shadow: false, rounded: true }) {
   // Initialize variables
   var element = null,
       options = null,
@@ -258,7 +258,7 @@ function MultiSelectTag(el, customs = { shadow: false, rounded: true }) {
 
   function setValues(fireEvent = true) {
       // Update element final values
-      selected_values = [];
+      var selected_values = [];
       for (var i = 0; i < options.length; i++) {
           element.options[i].selected = options[i].selected;
           if (options[i].selected) {
